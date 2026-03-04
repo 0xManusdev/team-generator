@@ -31,7 +31,9 @@ export function Stepper({ currentStep }: StepperProps) {
 				return (
 					<div
 						key={s}
-						className="flex min-w-0 flex-1 items-center"
+						className={`flex min-w-0 items-center ${
+							i < STEPS.length - 1 ? "flex-1" : ""
+						}`}
 					>
 						{/* Circle + label column */}
 						<div className="flex shrink-0 flex-col items-center gap-1 sm:flex-row sm:gap-2">
